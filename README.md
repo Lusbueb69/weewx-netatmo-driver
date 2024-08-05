@@ -52,6 +52,18 @@ For communication with the netatmo servers, you will need to add these parameter
    ```
   ⚠️ Make sure weewx user can read and write in this file.
 
+This section must be in your weewx.conf
+   ```
+##############################################################################
+
+[netatmo]
+    client_id = your-client-id-from-https://dev.netatmo.com/apps/
+    client_secret = your-client-secret-from-https://dev.netatmo.com/apps/
+    driver = user.netatmo
+    tokens_persistence_file = /etc/weewx/tokens_persistence_file.json
+
+##############################################################################
+   ```
 
 - `client_id` and `client_secret`: These must be obtained via the dev.netatmo.com website.
 
@@ -59,9 +71,10 @@ For communication with the netatmo servers, you will need to add these parameter
 This driver is distributed under the GPLv3 license. See [LICENSE](LICENSE) for more information.
 
 ## Support
-For questions, bug reports, or feature requests, please create an issue on the [GitHub repository](https://github.com/Buco7854/weewx-netatmo).
+For questions, bug reports, or feature requests, please create an issue on the [GitHub repository](https://github.com/Lusbueb69/weewx-netatmo-driver).
 
 ## Contributors
 - matthewwall (Original Author) - [Original Repository](https://github.com/matthewwall/weewx-netatmo)
 - bricebou (Contributor) - [Original Fork](https://github.com/bricebou/weewx-netatmo)
 - jkrasinger (Contributor) - [Merged Fork](https://github.com/jkrasinger/weewx-netatmo)
+- Buco7854 (Contributor) - [Merged Fork](https://github.com/Buco7854/weewx-netatmo)
