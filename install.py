@@ -19,11 +19,10 @@ class NetatmoInstaller(ExtensionInstaller):
             author_email="mwall@users.sourceforge.net",
             config={
                 'netatmo': {
-                    'username': 'INSERT_USERNAME_HERE',
-                    'password': 'INSERT_PASSWORD_HERE',
                     'client_id': 'INSERT_CLIENT_ID_HERE',
                     'client_secret': 'INSERT_CLIENT_SECRET_HERE',
                     'driver': 'user.netatmo',
+                    'tokens_persistence_file': '/etc/weewx/tokens_persistence_file.json',
                 }
             },
             files=[('bin/user', ['bin/user/netatmo.py'])]
